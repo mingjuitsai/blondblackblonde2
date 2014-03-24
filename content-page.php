@@ -6,11 +6,18 @@
  */
 ?>
 
+<!-- 
+
+
+
+-->
+
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<!-- notice: hidding page title on home page atm using is_front_page -->
 		<?php if(!is_front_page()): ?>
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+			<h1 class="entry-title"><?php the_title(); ?></h1>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 

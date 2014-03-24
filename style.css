@@ -280,6 +280,7 @@ a:active {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	display: inline-block;
 }
 .main-navigation li {
 	float: left;
@@ -293,6 +294,12 @@ a:active {
 	font-weight: bold;
 	text-transform: uppercase;
 	font-size: 20px;
+	-webkit-transition: color 300ms ease;
+	-ms-transition: color 300ms ease;
+	transition: color 300ms ease;
+}
+.main-navigation a:hover{color:#800000;
+	
 }
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -564,12 +571,13 @@ object {
 */
 .site{
 margin: auto;
-width: 1024px;
+width: 50%;
 }
 /*
 	Header
 */
 .site-title {
+	text-align:center;
 }
 .site-title a {
 	text-decoration: none;
@@ -578,4 +586,54 @@ width: 1024px;
 	color: rgb(34, 34, 34);
 }
 .site-title a:visited{
+}
+/* nav */
+.menu {
+	text-align: center;
+} 
+.main-navigation li:nth-child(2n+1) {
+clear: left;
+}
+/* Canvas */
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rotate
+{
+	0% { -webkit-transform: rotate3d(1, 1, 1, 0deg); }
+	50% { -webkit-transform: rotate3d(1, 1, 1, 30deg); }
+	100% { -webkit-transform: rotate3d(1, 1, 1, 90deg); }
+}
+
+/* Standard syntax */
+@keyframes rotate
+{
+	0% { transform: rotate3d(1, 1, 1, 0deg); }
+	50% { transform: rotate3d(1, 1, 1, 30deg); }
+	100% { transform: rotate3d(1, 1, 1, 90deg); }
+}
+@-webkit-keyframes rotate2
+{
+	0% { -webkit-transform: rotate3d(1, 1, 1, 0deg); }
+	50% { -webkit-transform: rotate3d(1, 1, 1, 180deg); }
+	100% { -webkit-transform: rotate3d(1, 1, 1, 0deg); }
+}
+
+/* Standard syntax */
+@keyframes rotate2
+{
+	0% { transform: rotate3d(1, 1, 1, 0deg); }
+	50% { transform: rotate3d(1, 1, 1, 80deg); }
+	100% { transform: rotate3d(1, 1, 1, 120deg); }
+}
+.wrap-canvas{
+	width:100%;
+}
+.shape{ /* Chrome, Safari, Opera */
+	-webkit-animation: rotate 15s linear 2s infinite alternate; /* Chrome, Safari, Opera */
+	animation: rotate 15s linear 2s infinite alternate; /* Chrome, Safari, Opera */
+	-webkit-transform-origin: 30px 103px;
+}
+.shape2{ /* Chrome, Safari, Opera */
+	-webkit-animation: rotate2 35s linear 2s infinite alternate; /* Chrome, Safari, Opera */
+	animation: rotate2 35s linear 2s infinite alternate; /* Chrome, Safari, Opera */
+	-webkit-transform-origin: 230px 103px;
 }
