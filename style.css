@@ -280,12 +280,11 @@ a:active {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
-	display: inline-block;
 }
 .main-navigation li {
 	float: left;
 	position: relative;
-	margin-right: 15px;
+	margin-right: 20px;
 }
 .main-navigation a {
 	display: block;
@@ -577,7 +576,6 @@ width: 50%;
 	Header
 */
 .site-title {
-	text-align:center;
 }
 .site-title a {
 	text-decoration: none;
@@ -591,9 +589,7 @@ width: 50%;
 .menu {
 	text-align: center;
 } 
-.main-navigation li:nth-child(2n+1) {
-clear: left;
-}
+
 /* Canvas */
 /* Chrome, Safari, Opera */
 @-webkit-keyframes rotate
