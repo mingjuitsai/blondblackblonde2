@@ -16,7 +16,11 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		
+		<div class="shape">
+			<section class="box"></section>
+			<section class="box2"></section>
+			<section class="box3"></section>
+		</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
