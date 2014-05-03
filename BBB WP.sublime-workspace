@@ -20,6 +20,14 @@
 	"buffers":
 	[
 		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 747,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "header.php",
 			"settings":
 			{
@@ -28,29 +36,18 @@
 			}
 		},
 		{
-			"file": "index.php",
-			"settings":
-			{
-				"buffer_size": 1229,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "js/site.js",
 			"settings":
 			{
-				"buffer_size": 1924,
+				"buffer_size": 200,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "/*\nTheme Name: blondblackblonde\nTheme URI: http://underscores.me/\nAuthor: Underscores.me\nAuthor URI: http://underscores.me/\nDescription: Description\nVersion: 1.0\nLicense: GNU General Public License\nLicense URI: license.txt\nText Domain: blondblackblonde\nDomain Path: /languages/\nTags:\n*/\n\n/*--------------------------------------------------------------\n>>> TABLE OF CONTENTS:\n----------------------------------------------------------------\n1.0 - Reset\n2.0 - Typography\n3.0 - Elements\n4.0 - Inputs and buttons\n5.0 - Navigation\n	5.1 - Links\n	5.2 - Menus\n6.0 - Accessibility\n7.0 - Alignments\n8.0 - Clearings\n9.0 - Widgets\n10.0 - Content\n	10.1 - Posts and pages\n	10.2 - Asides\n	10.3 - Comments\n11.0 - Infinite scroll\n12.0 - Media\n--------------------------------------------------------------*/\n\n/*--------------------------------------------------------------\n1.0 - Reset\n--------------------------------------------------------------*/\nhtml,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;font-family:inherit;font-size:100%;font-style:inherit;font-weight:inherit;margin:0;outline:0;padding:0;vertical-align:baseline}html{font-size:62.5%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}body{background:#fff}article,aside,details,figcaption,figure,footer,header,main,nav,section{display:block}ol,ul{list-style:none}table{border-collapse:separate;border-spacing:0}caption,th,td{font-weight:normal;text-align:left}blockquote:before,blockquote:after,q:before,q:after{content:\"\"}blockquote,q{quotes:\"\" \"\"}a:focus{outline:thin dotted}a:hover,a:active{outline:0}a img{border:0}\n/*--------------------------------------------------------------\n2.0 Typography\n--------------------------------------------------------------*/\nbody,\nbutton,\ninput,\nselect,\ntextarea {\n	color: #404040;\n	font-family: \"proxima-nova\",sans-serif;\n	font-size: 16px;\n	font-size: 1.6rem;\n	line-height: 1.5;\n}\nh1, h2, h3, h4, h5, h6 {\n	clear: both;\n}\np {\n	margin-bottom: 1.5em;\n}\nb, strong {\n	font-weight: bold;\n}\ndfn, cite, em, i {\n	font-style: italic;\n}\nblockquote {\n	margin: 0 1.5em;\n}\naddress {\n	margin: 0 0 1.5em;\n}\npre {\n	background: #eee;\n	font-family: \"Courier 10 Pitch\", Courier, monospace;\n	font-size: 15px;\n	font-size: 1.5rem;\n	line-height: 1.6;\n	margin-bottom: 1.6em;\n	max-width: 100%;\n	overflow: auto;\n	padding: 1.6em;\n}\ncode, kbd, tt, var {\n	font: 15px Monaco, Consolas, \"Andale Mono\", \"DejaVu Sans Mono\", monospace;\n}\nabbr, acronym {\n	border-bottom: 1px dotted #666;\n	cursor: help;\n}\nmark, ins {\n	background: #fff9c0;\n	text-decoration: none;\n}\nsup,\nsub {\n	font-size: 75%;\n	height: 0;\n	line-height: 0;\n	position: relative;\n	vertical-align: baseline;\n}\nsup {\n	bottom: 1ex;\n}\nsub {\n	top: .5ex;\n}\nsmall {\n	font-size: 75%;\n}\nbig {\n	font-size: 125%;\n}\n\n/*--------------------------------------------------------------\n3.0 Elements\n--------------------------------------------------------------*/\nhr {\n	background-color: #ccc;\n	border: 0;\n	height: 1px;\n	margin-bottom: 1.5em;\n}\nul, ol {\n	margin: 0 0 1.5em 3em;\n}\nul {\n	list-style: disc;\n}\nol {\n	list-style: decimal;\n}\nli > ul,\nli > ol {\n	margin-bottom: 0;\n	margin-left: 1.5em;\n}\ndt {\n	font-weight: bold;\n}\ndd {\n	margin: 0 1.5em 1.5em;\n}\nfigure {\n	margin: 0;\n}\ntable {\n	margin: 0 0 1.5em;\n	width: 100%;\n}\nth {\n	font-weight: bold;\n}\n\n/*--------------------------------------------------------------\n4.0 Inputs and buttons\n--------------------------------------------------------------*/\nbutton,\ninput,\nselect,\ntextarea {\n	font-size: 100%; /* Corrects font size not being inherited in all browsers */\n	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */\n	vertical-align: baseline; /* Improves appearance and consistency in all browsers */\n	*vertical-align: middle; /* Improves appearance and consistency in all browsers */\n}\nbutton,\ninput[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n	border: 1px solid #ccc;\n	border-color: #ccc #ccc #bbb #ccc;\n	border-radius: 3px;\n	background: #e6e6e6;\n	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);\n	color: rgba(0, 0, 0, .8);\n	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */\n	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */\n	font-size: 12px;\n	font-size: 1.2rem;\n	line-height: 1;\n	padding: .6em 1em .4em;\n	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);\n}\nbutton:hover,\ninput[type=\"button\"]:hover,\ninput[type=\"reset\"]:hover,\ninput[type=\"submit\"]:hover {\n	border-color: #ccc #bbb #aaa #bbb;\n	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);\n}\nbutton:focus,\ninput[type=\"button\"]:focus,\ninput[type=\"reset\"]:focus,\ninput[type=\"submit\"]:focus,\nbutton:active,\ninput[type=\"button\"]:active,\ninput[type=\"reset\"]:active,\ninput[type=\"submit\"]:active {\n	border-color: #aaa #bbb #bbb #bbb;\n	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);\n}\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n	padding: 0; /* Addresses excess padding in IE8/9 */\n}\ninput[type=\"search\"] {\n	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */\n	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */\n	-moz-box-sizing:    content-box;\n	box-sizing:         content-box;\n}\ninput[type=\"search\"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */\n	-webkit-appearance: none;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */\n	border: 0;\n	padding: 0;\n}\ninput[type=\"text\"],\ninput[type=\"email\"],\ninput[type=\"url\"],\ninput[type=\"password\"],\ninput[type=\"search\"],\ntextarea {\n	color: #666;\n	border: 1px solid #ccc;\n	border-radius: 3px;\n}\ninput[type=\"text\"]:focus,\ninput[type=\"email\"]:focus,\ninput[type=\"url\"]:focus,\ninput[type=\"password\"]:focus,\ninput[type=\"search\"]:focus,\ntextarea:focus {\n	color: #111;\n}\ninput[type=\"text\"],\ninput[type=\"email\"],\ninput[type=\"url\"],\ninput[type=\"password\"],\ninput[type=\"search\"] {\n	padding: 3px;\n}\ntextarea {\n	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */\n	padding-left: 3px;\n	vertical-align: top; /* Improves readability and alignment in all browsers */\n	width: 98%;\n}\n\n/*--------------------------------------------------------------\n5.0 Navigation\n--------------------------------------------------------------*/\n/*--------------------------------------------------------------\n5.1 Links\n--------------------------------------------------------------*/\na {\n}\na:visited {\n}\na:hover,\na:focus,\na:active {\n	color: midnightblue;\n}\n\n/*--------------------------------------------------------------\n5.2 Menus\n--------------------------------------------------------------*/\n.main-navigation {\n	clear: both;\n	display: block;\n	float: left;\n	width: 100%;\n}\n.main-navigation ul {\n	list-style: none;\n	margin: 0;\n	padding-left: 0;\n	display: inline-block;\n}\n.main-navigation li {\n	float: left;\n	position: relative;\n	margin-right: 105px;\n}\n.main-navigation a {\n	display: block;\n	text-decoration: none;\n	color: rgb(53, 53, 53);\n	font-weight: bold;\n	text-transform: uppercase;\n	font-size: 20px;\n	-webkit-transition: color 300ms ease;\n	-ms-transition: color 300ms ease;\n	transition: color 300ms ease;\n}\n.main-navigation a:hover{color:#800000;\n	\n}\n.main-navigation ul ul {\n	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);\n	display: none;\n	float: left;\n	left: 0;\n	position: absolute;\n	top: 1.5em;\n	z-index: 99999;\n}\n.main-navigation ul ul ul {\n	left: 100%;\n	top: 0;\n}\n.main-navigation ul ul a {\n	width: 200px;\n}\n.main-navigation ul ul li {\n}\n.main-navigation li:hover > a {\n}\n.main-navigation ul ul :hover > a {\n}\n.main-navigation ul ul a:hover {\n}\n.main-navigation ul li:hover > ul {\n	display: block;\n}\n.main-navigation .current_page_item a,\n.main-navigation .current-menu-item a {\n}\n/* Small menu */\n.menu-toggle {\n	cursor: pointer;\n	display: none;\n}\n@media screen and (max-width: 600px) {\n	.menu-toggle,\n	.main-navigation.toggled .nav-menu {\n		display: block;\n	}\n\n	.main-navigation ul {\n		display: none;\n	}\n}\n.site-main .comment-navigation,\n.site-main .paging-navigation,\n.site-main .post-navigation {\n	margin: 0 0 1.5em;\n	overflow: hidden;\n}\n.comment-navigation .nav-previous,\n.paging-navigation .nav-previous,\n.post-navigation .nav-previous {\n	float: left;\n	width: 50%;\n}\n.comment-navigation .nav-next,\n.paging-navigation .nav-next,\n.post-navigation .nav-next {\n	float: right;\n	text-align: right;\n	width: 50%;\n}\n\n/*--------------------------------------------------------------\n6.0 Accessibility\n--------------------------------------------------------------*/\n/* Text meant only for screen readers */\n.screen-reader-text {\n	clip: rect(1px, 1px, 1px, 1px);\n	position: absolute !important;\n}\n\n.screen-reader-text:hover,\n.screen-reader-text:active,\n.screen-reader-text:focus {\n	background-color: #f1f1f1;\n	border-radius: 3px;\n	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);\n	clip: auto !important;\n	color: #21759b;\n	display: block;\n	font-size: 14px;\n	font-weight: bold;\n	height: auto;\n	left: 5px;\n	line-height: normal;\n	padding: 15px 23px 14px;\n	text-decoration: none;\n	top: 5px;\n	width: auto;\n	z-index: 100000; /* Above WP toolbar */\n}\n\n/*--------------------------------------------------------------\n7.0 Alignments\n--------------------------------------------------------------*/\n.alignleft {\n	display: inline;\n	float: left;\n	margin-right: 1.5em;\n}\n.alignright {\n	display: inline;\n	float: right;\n	margin-left: 1.5em;\n}\n.aligncenter {\n	clear: both;\n	display: block;\n	margin: 0 auto;\n}\n\n/*--------------------------------------------------------------\n8.0 Clearings\n--------------------------------------------------------------*/\n.clear:before,\n.clear:after,\n.entry-content:before,\n.entry-content:after,\n.comment-content:before,\n.comment-content:after,\n.site-header:before,\n.site-header:after,\n.site-content:before,\n.site-content:after,\n.site-footer:before,\n.site-footer:after {\n	content: '';\n	display: table;\n}\n.clear:after,\n.entry-content:after,\n.comment-content:after,\n.site-header:after,\n.site-content:after,\n.site-footer:after {\n	clear: both;\n}\n/*--------------------------------------------------------------\n9.0 Widgets\n--------------------------------------------------------------*/\n.widget {\n	margin: 0 0 1.5em;\n}\n\n/* Make sure select elements fit in widgets */\n.widget select {\n	max-width: 100%;\n}\n\n/* Search widget */\n.widget_search .search-submit {\n	display: none;\n}\n/*--------------------------------------------------------------\n10.0 Content\n--------------------------------------------------------------*/\n/*--------------------------------------------------------------\n10.1 Posts and pages\n--------------------------------------------------------------*/\n.sticky {\n}\n.hentry {\n	margin: 0 0 1.5em;\n}\n.byline,\n.updated {\n	display: none;\n}\n.single .byline,\n.group-blog .byline {\n	display: inline;\n}\n.page-content,\n.entry-content,\n.entry-summary {\n	margin: 1.5em 0 0;\n}\n.page-links {\n	clear: both;\n	margin: 0 0 1.5em;\n}\n\n/*--------------------------------------------------------------\n10.2 Asides\n--------------------------------------------------------------*/\n.blog .format-aside .entry-title,\n.archive .format-aside .entry-title {\n	display: none;\n}\n\n/*--------------------------------------------------------------\n10.3 Comments\n--------------------------------------------------------------*/\n.comment-content a {\n	word-wrap: break-word;\n}\n.bypostauthor {\n}\n\n/*--------------------------------------------------------------\n11.0 Infinite scroll\n--------------------------------------------------------------*/\n/* Globally hidden elements when Infinite Scroll is supported and in use. */\n.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */\n.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */\n	display: none;\n}\n/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */\n.infinity-end.neverending .site-footer {\n	display: block;\n}\n\n/*--------------------------------------------------------------\n12.0 Media\n--------------------------------------------------------------*/\n.page-content img.wp-smiley,\n.entry-content img.wp-smiley,\n.comment-content img.wp-smiley {\n	border: none;\n	margin-bottom: 0;\n	margin-top: 0;\n	padding: 0;\n}\n.wp-caption {\n	border: 1px solid #ccc;\n	margin-bottom: 1.5em;\n	max-width: 100%;\n}\n.wp-caption img[class*=\"wp-image-\"] {\n	display: block;\n	margin: 1.2% auto 0;\n	max-width: 98%;\n}\n.wp-caption-text {\n	text-align: center;\n}\n.wp-caption .wp-caption-text {\n	margin: 0.8075em 0;\n}\n.site-main .gallery {\n	margin-bottom: 1.5em;\n}\n.gallery-caption {\n}\n.site-main .gallery a img {\n	border: none;\n	height: auto;\n	max-width: 90%;\n}\n.site-main .gallery dd {\n	margin: 0;\n}\n.site-main .gallery-columns-4 .gallery-item {\n}\n.site-main .gallery-columns-4 .gallery-item img {\n}\n/* Make sure embeds and iframes fit their containers */\nembed,\niframe,\nobject {\n	max-width: 100%;\n}\n/*\n	Site Container\n*/\n.site{\nmargin: auto;\nwidth: 50%;\n}\n/*\n	Header\n*/\n.site-title {\n	text-align:center;\n}\n.site-title a {\n	text-decoration: none;\n	font-size: 45px;\n	font-weight: bold;\n	color: rgb(34, 34, 34);\n}\n.site-title a:visited{\n}\n/* nav */\n.menu {\n	text-align: center;\n} \n.main-navigation li:nth-child(2n+1) {\nclear: left;\n}\n/* Canvas */\n/* Chrome, Safari, Opera */\n@-webkit-keyframes rotate\n{\n	0% { -webkit-transform: rotate3d(1, 1, 1, 0deg); }\n	50% { -webkit-transform: rotate3d(1, 1, 1, 30deg); }\n	100% { -webkit-transform: rotate3d(1, 1, 1, 90deg); }\n}\n\n/* Standard syntax */\n@keyframes rotate\n{\n	0% { transform: rotate3d(1, 1, 1, 0deg); }\n	50% { transform: rotate3d(1, 1, 1, 30deg); }\n	100% { transform: rotate3d(1, 1, 1, 90deg); }\n}\n@-webkit-keyframes rotate2\n{\n	0% { -webkit-transform: rotate3d(1, 1, 1, 0deg); }\n	50% { -webkit-transform: rotate3d(1, 1, 1, 180deg); }\n	100% { -webkit-transform: rotate3d(1, 1, 1, 0deg); }\n}\n\n/* Standard syntax */\n@keyframes rotate2\n{\n	0% { transform: rotate3d(1, 1, 1, 0deg); }\n	50% { transform: rotate3d(1, 1, 1, 80deg); }\n	100% { transform: rotate3d(1, 1, 1, 120deg); }\n}\n.wrap-canvas{\n	width:100%;\n}\n.shape{ /* Chrome, Safari, Opera */\n	-webkit-animation: rotate 15s linear 2s infinite alternate; /* Chrome, Safari, Opera */\n	animation: rotate 15s linear 2s infinite alternate; /* Chrome, Safari, Opera */\n	-webkit-transform-origin: 30px 103px;\n}\n.shape2{ /* Chrome, Safari, Opera */\n	-webkit-animation: rotate2 35s linear 2s infinite alternate; /* Chrome, Safari, Opera */\n	animation: rotate2 35s linear 2s infinite alternate; /* Chrome, Safari, Opera */\n	-webkit-transform-origin: 230px 103px;\n}",
 			"file": "style.css",
-			"file_size": 15242,
-			"file_write_time": 130401404625272265,
 			"settings":
 			{
-				"buffer_size": 15243,
+				"buffer_size": 15521,
 				"line_ending": "Unix"
 			}
 		},
@@ -69,12 +66,28 @@
 				"buffer_size": 31336,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "content.php",
+			"settings":
+			{
+				"buffer_size": 2370,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "single.php",
+			"settings":
+			{
+				"buffer_size": 693,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 242.0,
 		"selected_items":
 		[
 			[
@@ -306,11 +319,40 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 747,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								442,
+								442
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
 					"file": "header.php",
 					"semi_transient": false,
 					"settings":
@@ -335,36 +377,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "index.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1229,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								513,
-								513
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 264.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -373,15 +386,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1924,
+						"buffer_size": 200,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								598,
-								598
+								195,
+								195
 							]
 						],
 						"settings":
@@ -390,7 +403,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 198.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -402,15 +415,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15243,
+						"buffer_size": 15521,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7595,
-								7600
+								15129,
+								15129
 							]
 						],
 						"settings":
@@ -418,11 +431,11 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 10.0,
-						"translation.y": 5881.0,
+						"translation.x": 0.0,
+						"translation.y": 13867.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -450,7 +463,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -465,8 +478,8 @@
 						"selection":
 						[
 							[
-								0,
-								31336
+								23330,
+								23330
 							]
 						],
 						"settings":
@@ -477,7 +490,65 @@
 						"translation.y": 23984.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "content.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2370,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								248,
+								248
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 594.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "single.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 693,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								113,
+								113
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -602,7 +673,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 197.0,
 	"status_bar_visible": true,
 	"template_settings":
