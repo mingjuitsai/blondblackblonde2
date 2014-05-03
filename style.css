@@ -46,17 +46,18 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: "proxima-nova",sans-serif;
-	font-size: 16px;
-	font-size: 1.6rem;
-	line-height: 1.5;
+	color: #363636;
+	font-family: "calluna",Georgia, Times, "Times New Roman", serif;
+	font-size: 1.7rem;
+	line-height: 2.2rem;
+	-webkit-font-smoothing: antialiased;
 }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 p {
 	margin-bottom: 1.5em;
+	
 }
 b, strong {
 	font-weight: bold;
@@ -257,7 +258,7 @@ textarea {
 /*--------------------------------------------------------------
 5.1 Links
 --------------------------------------------------------------*/
-a {
+a {color:rgb(39, 39, 39);
 }
 a:visited {
 }
@@ -290,13 +291,14 @@ a:active {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
-	color: rgb(53, 53, 53);
+	color: rgb(36, 36, 36);
 	font-weight: bold;
 	text-transform: uppercase;
-	font-size: 20px;
+	font-size: 2rem;
 	-webkit-transition: color 300ms ease;
 	-ms-transition: color 300ms ease;
 	transition: color 300ms ease;
+	font-family: "proxima-nova","Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 }
 .main-navigation a:hover{color:#800000;
 	
@@ -479,7 +481,7 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1.7rem 0;
 }
 .page-links {
 	clear: both;
@@ -576,13 +578,15 @@ width: 50%;
 /*
 	Header
 */
-.site-title {text-align:center;
+.site-header{padding:8rem 0 3rem 0;}
+.site-title {text-align:center;font-family:"proxima-nova","Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 }
 .site-title a {
 	text-decoration: none;
-	font-size: 45px;
+	font-size: 7rem;
 	font-weight: bold;
-	color: rgb(34, 34, 34);
+	color: rgb(53, 53, 53);
+	line-height: 7rem;
 }
 .site-title a:visited{
 }
@@ -590,32 +594,15 @@ width: 50%;
 .menu {
 	text-align: center;
 } 
+/* shape */
+#shape{width:550px;margin:auto;}
 
-/* Canvas */
-/* Chrome, Safari, Opera */
-@-webkit-keyframes rotate
-{
-	0% { -webkit-transform: rotate3d(1, 1, 1, 0deg); }
-	50% { -webkit-transform: rotate3d(1, 1, 1, 30deg); }
-	100% { -webkit-transform: rotate3d(1, 1, 1, 90deg); }
+/* posts */
+.entry-title{
+	font-size:3rem;
+	line-height:3.3rem;
+	font-weight:700;
 }
-
-/* Standard syntax */
-@keyframes rotate
-{
-	0% { transform: rotate3d(1, 1, 1, 0deg); }
-	50% { transform: rotate3d(1, 1, 1, 30deg); }
-	100% { transform: rotate3d(1, 1, 1, 90deg); }
-}
-@-webkit-keyframes rotate2
-{
-	0% { -webkit-transform: rotate3d(1, 1, 1, 0deg); }
-	50% { -webkit-transform: rotate3d(1, 1, 1, 180deg); }
-	100% { -webkit-transform: rotate3d(1, 1, 1, 0deg); }
-}
-
-/* animation */
-.shape {
-width:100%;
-height: 500px;
+.entry-title a{
+	text-decoration:none;color:rgb(34, 34, 34);font-weight:700;
 }
