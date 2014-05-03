@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 p {
-	margin-bottom: 1.5em;
+	margin-bottom: 2.1rem;
 	
 }
 b, strong {
@@ -605,4 +605,8 @@ width: 50%;
 }
 .entry-title a{
 	text-decoration:none;color:rgb(34, 34, 34);font-weight:700;
+}
+.post img{
+	width: 100%;
+	height: auto;
 }
