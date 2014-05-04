@@ -48,7 +48,7 @@
 								$url = wp_get_attachment_url( $attachment_id );
 								$name = get_the_title( $attachment_id );
 							?>
-						    <li><a href="#" data-src="<?php echo $url; ?>"><?php echo $name; ?></a></li>  
+						    <li><a href="#" data-src="<?php echo $url; ?>"><span> <?php echo $name; ?></span></a></li>  
 
 							<?php endwhile; ?>
 				 		</ol>
@@ -65,7 +65,7 @@
 			<?php endif; ?>
 	 
 		<?php endwhile; ?>
-
+		<!-- Flexible Content END -->
 
 		<?php
 			wp_link_pages( array(
