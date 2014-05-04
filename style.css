@@ -629,6 +629,7 @@ margin-top: .8rem;
 /* 
 	music 
 */
+li.playing{background:rgb(247, 247, 247);}
 ol.playlist {margin:1.6rem 0 2rem 0;
 }
 .playlist li{}

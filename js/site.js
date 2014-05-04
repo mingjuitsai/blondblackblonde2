@@ -109,15 +109,7 @@ $(function() {
         return;
     }
     // Setup the player to autoplay the next track
-    a = audiojs.createAll({
-        trackEnded: function() {
-            var next = $('ol li.playing').next();
-            if (!next.length) next = $('ol li').first();
-            next.addClass('playing').siblings().removeClass('playing');
-            audio.load($('a', next).attr('data-src'));
-            audio.play();
-        }
-    });
+    a = audiojs.createAll({});
     // Multiple Playlist 
     $.each(a, function(index) {
         // Load in the first track
@@ -126,18 +118,27 @@ $(function() {
         first = $(container).next('li').children('a').attr('data-src');
         $(container).next('li').addClass('playing');
         audio.load(first);
-
+        console.log();
         // Load in a track on click
         $(container).nextAll('li').click(function(e) {
             e.preventDefault();
-            $(this).addClass('playing');
             $('ol li').siblings().removeClass('playing');
+            $(this).addClass('playing');
             $.each(a, function(index) {
                 a[index].pause();
             });
             audio.load($(this).children('a').attr('data-src'));
             audio.play();
         });
+
+        audio['settings']['trackEnded'] = function() {
+            var next = $('.playing').next();
+            if (!next.length) next = $(container).next('li');
+            $('ol li').siblings().removeClass('playing');
+            next.addClass('playing');
+            audio.load($('a', next).attr('data-src'));
+            audio.play();
+        }
 
         // Keyboard shortcuts
         $(document).keydown(function(e) {
