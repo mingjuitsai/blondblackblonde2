@@ -86,11 +86,11 @@ function blondblackblonde_scripts() {
 	// including jQuery 
 	wp_enqueue_script( 'blondblackblonde-jquery', 'http://code.jquery.com/jquery-latest.min.js', array(), '20140222', true );
 	// html5shiv
-	wp_enqueue_script( 'blondblackblonde-html5shivjs', get_template_directory_uri() . '/html5shiv/src/html5shiv.js', array(), '20140225', true );
+	wp_enqueue_script( 'blondblackblonde-html5shivjs', get_template_directory_uri() . '/js/html5shiv/src/html5shiv.js', array(), '20140225', true );
 	// including Raphaël js library
 	wp_enqueue_script( 'blondblackblonde-raphaeljs', get_template_directory_uri() . '/js/raphael-min.js', array(), '20140223', true );
 	// audio js html5shiv
-	wp_enqueue_script( 'blondblackblonde-audiojs', get_template_directory_uri() . '/audiojs/audiojs/audio.min.js', array(), '20140224', true );
+	wp_enqueue_script( 'blondblackblonde-audiojs', get_template_directory_uri() . '/js/audiojs/audiojs/audio.min.js', array(), '20140224', true );
 	// including site js 
 	wp_enqueue_script( 'blondblackblonde-sitejs', get_template_directory_uri() . '/js/site.js', array(), '20140225', true );
 

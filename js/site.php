@@ -10,12 +10,6 @@ function get_random_color(){
 return '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
 }
 jQuery(document).ready(function($) {
-	// stop running Rahapel if no shape canvas
-	var shapeid = "shape";
-	if(document.getElementById('shape') === null || 
-   		document.getElementById('shape') === undefined) {
-    return;
-	}
 	/*
 		Home page shape
 	*/
@@ -37,7 +31,7 @@ jQuery(document).ready(function($) {
 	path_b_pos.push({path: 'M 229.667,82.834 167.739,155.463 269.17,296.167 353,220.834  z'});
 	path_b_pos.push({path: 'M 289.667,102.167 108.333,18.834 21.667,224.167 197,159.959 332.333,297.501 434.333,128.834   483,67.5  z'});
 
-	// draw shapes
+	// draw shapes 
 	var shape = Raphael('shape', '508', '319.919');
 	var duration =400; 
 	var easing = "backIn"
@@ -65,56 +59,8 @@ jQuery(document).ready(function($) {
 		nextShape();
 		myVar = setInterval(nextShape, interval);
 	});
-});
-/*
-	Music
-*/
-$(function() { 
-		var playerclass = "playlist";
-		if(document.getElementsByClassName(playerclass) === null || 
-	   		document.getElementsByClassName(playerclass) === undefined) {
-	    return;
-		}
-        // Setup the player to autoplay the next track
-        var a = audiojs.createAll({
-          trackEnded: function() {
-            var next = $('.playlist li.playing').next();
-            if (!next.length) next = $('.playlist li').first();
-            next.addClass('playing').siblings().removeClass('playing');
-            audio.load($('a', next).attr('data-src'));
-            audio.play();
-          }
-        });
-        
-        // Load in the first track
-        var audio = a[0];
-            first = $('.playlist a').attr('data-src');
-        $('.playlist li').first().addClass('playing');
-        audio.load(first);
+	/*
+		Music
+	*/
 
-        // Load in a track on click
-        $('.playlist li').click(function(e) {
-          e.preventDefault();
-          $(this).addClass('playing').siblings().removeClass('playing');
-          audio.load($('a', this).attr('data-src'));
-          audio.play();
-        });
-        // Keyboard shortcuts
-        $(document).keydown(function(e) {
-          var unicode = e.charCode ? e.charCode : e.keyCode;
-             // right arrow
-          if (unicode == 39) {
-            var next = $('li.playing').next();
-            if (!next.length) next = $('.playlist li').first();
-            next.click();
-            // back arrow
-          } else if (unicode == 37) {
-            var prev = $('li.playing').prev();
-            if (!prev.length) prev = $('.playlist li').last();
-            prev.click();
-            // spacebar
-          } else if (unicode == 32) {
-            audio.playPause();
-          }
-        })
-      });
+});
