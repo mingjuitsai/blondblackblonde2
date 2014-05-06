@@ -42,9 +42,9 @@
 			<?php 
 				$menu_arg = array(
 						'theme_location'  => 'primary',
-						'before'          => '',
-						'after'           => '',
-						'link_before'     => '<div id="header-canvas" class="wrap-canvas"></div>',
+						'before'          => '<span>',
+						'after'           => '</span>',
+						'link_before'     => '<div id="shape" class="wrap-canvas"></div>',
 						'link_after'      => '',
 						'items_wrap' 	  => '<ul><li id="item-id">Menu: </li>%3$s</ul>'
 				);

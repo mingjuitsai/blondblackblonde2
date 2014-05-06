@@ -17,6 +17,7 @@ get_header(); ?>
 		<?php if ( is_front_page()) : ?>
 			<!-- with sitev1.js has random shapes <div id="shape">
 			</div> -->
+			
 		<?php else: ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
