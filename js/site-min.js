@@ -1,136 +1,80 @@
-/**
- * site.js
- *
- * Handles site functions and interactions.
- */
-function get_random(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
+function get_random(d, c) {
+    return Math.floor(Math.random() * (c - d)) + d
 }
 
 function get_random_color() {
-    return '#' + (0x1000000 + (Math.random()) * 0xffffff).toString(16).substr(1, 6);
+    return "#" + (16777216 + 16777215 * Math.random()).toString(16).substr(1, 6)
 }
-jQuery(document).ready(function($) {
-    /*
-		Home page shape
-	*/
-
-    // draw shapes
-    var duration = 200;
-    var easing = "backOut";
-    // path a path
-
-
-    // add shape to each menu 
-    $(".nav-menu > li").each(function(index) {
-        drawshape($(".wrap-canvas")[index], index);
-    });
-
-    function isOdd(num) {
-        return num % 2 == 1;
-    }
-
-    function drawshape(target, index) {
-        var shape = new Raphael(target, '120', '60');
-        var draw = shape.path("M 60, 30");
-        var bbb;
-        var bbbr;
-        if (isOdd(index)) {
-            bbb = '#000';
-            bbbr = '#F6ED0C';
-        } else {
-            bbb = '#F6ED0C';
-            bbbr = '#000';
-        }
-        draw.attr({
-            'stroke-width': '0',
-            'stroke-opacity': '1',
-            fill: bbb
-        }).data('id', 'draw' + index);
-        draw.animate({
-            path: get_random_path(),
-        }, duration, easing);
-
-        // hover
-        $(target).hover(function(ele) {
-            draw.animate({
-                path: get_random_path(),
+jQuery(document).ready(function(d) {
+    function c(c, k) {
+        var g = (new Raphael(c, "120", "60")).path("M 60, 30"),
+            h;
+        h = 1 == k % 2 ? "#000" : "#F6ED0C";
+        g.attr({
+            "stroke-width": "0",
+            "stroke-opacity": "1",
+            fill: h
+        }).data("id", "draw" + k);
+        g.animate({
+            path: e()
+        }, b, f);
+        d(c).hover(function(c) {
+            g.animate({
+                path: e(),
                 fill: get_random_color()
-            }, duration, easing);
+            }, b, f)
         }, function() {
-            draw.animate({
-                fill: bbb
-            }, duration, easing);
-        });
+            g.animate({
+                fill: h
+            }, b, f)
+        })
     }
 
-    function get_random_path() {
-        var path = new Array();
-        var m = get_random(0, 10) + " " + get_random(10, 10);
-        var ctr = get_random(90, 120) + " " + get_random(0, 25);
-        var cbr = get_random(90, 120) + " " + get_random(30, 60);
-        var cbl = get_random(0, 30) + " " + get_random(30, 60);
-        path.push(m, ctr, cbr, cbl);
-        return "M " + path + " z";
+    function e() {
+        var b = [],
+            c = get_random(0, 10) + " " + get_random(10, 10),
+            d = get_random(90, 120) + " " + get_random(0, 25),
+            e = get_random(90, 120) + " " + get_random(30, 60),
+            f = get_random(0,
+                30) + " " + get_random(30, 60);
+        b.push(c, d, e, f);
+        return "M " + b + " z"
     }
-
+    var b = 200,
+        f = "backOut";
+    d(".nav-menu > li").each(function(b) {
+        c(d(".wrap-canvas")[b], b)
+    })
 });
-/*
-	Music
-*/
 $(function() {
-    var playerclass = "playlist";
-    if (document.getElementsByClassName(playerclass) === null ||
-        document.getElementsByClassName(playerclass) === undefined) {
-        return;
-    }
-    // Setup the player to autoplay the next track
-    a = audiojs.createAll({});
-    // Multiple Playlist 
-    $.each(a, function(index) {
-        // Load in the first track
-        var audio = a[index];
-        var container = '#' + audio['wrapper'].id;
-        first = $(container).next('li').children('a').attr('data-src');
-        $(container).next('li').addClass('playing');
-        audio.load(first);
+    null !== document.getElementsByClassName("playlist") && void 0 !== document.getElementsByClassName("playlist") && (a = audiojs.createAll({}), $.each(a, function(d) {
+        var c = a[d],
+            e = "#" + c.wrapper.id;
+        first = $(e).next("li").children("a").attr("data-src");
+        $(e).next("li").addClass("playing");
+        c.load(first);
         console.log();
-        // Load in a track on click
-        $(container).nextAll('li').click(function(e) {
-            e.preventDefault();
-            $('ol li').siblings().removeClass('playing');
-            $(this).addClass('playing');
-            $.each(a, function(index) {
-                a[index].pause();
+        $(e).nextAll("li").click(function(b) {
+            b.preventDefault();
+            $("ol li").siblings().removeClass("playing");
+            $(this).addClass("playing");
+            $.each(a, function(b) {
+                a[b].pause()
             });
-            audio.load($(this).children('a').attr('data-src'));
-            audio.play();
+            c.load($(this).children("a").attr("data-src"));
+            c.play()
         });
-        audio['settings']['trackEnded'] = function() {
-            var next = $('.playing').next();
-            if (!next.length) next = $(container).next('li');
-            $('ol li').siblings().removeClass('playing');
-            next.addClass('playing');
-            audio.load($('a', next).attr('data-src'));
-            audio.play();
-        }
-        // Keyboard shortcuts
-        $(document).keydown(function(e) {
-            var unicode = e.charCode ? e.charCode : e.keyCode;
-            // right arrow
-            if (unicode == 39) {
-                var next = $('li.playing').next();
-                if (!next.length) next = $('ol li').first();
-                next.click();
-                // back arrow
-            } else if (unicode == 37) {
-                var prev = $('li.playing').prev();
-                if (!prev.length) prev = $('ol li').last();
-                prev.click();
-                // spacebar
-            } else if (unicode == 32) {
-                audio.playPause();
-            }
-        });
-    });
+        c.settings.trackEnded = function() {
+            var b = $(".playing").next();
+            b.length || (b = $(e).next("li"));
+            $("ol li").siblings().removeClass("playing");
+            b.addClass("playing");
+            c.load($("a", b).attr("data-src"));
+            c.play()
+        };
+        $(document).keydown(function(b) {
+            b = b.charCode ? b.charCode : b.keyCode;
+            39 == b ? (b = $("li.playing").next(), b.length || (b = $("ol li").first()), b.click()) : 37 == b ? (b = $("li.playing").prev(), b.length || (b = $("ol li").last()), b.click()) : 32 == b && c.playPause()
+        })
+    }))
 });
