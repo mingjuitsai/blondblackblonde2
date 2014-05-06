@@ -42,10 +42,10 @@
 			<?php 
 				$menu_arg = array(
 						'theme_location'  => 'primary',
-						'before'          => '<span>',
-						'after'           => '</span>',
-						'link_before'     => '<div id="shape" class="wrap-canvas"></div>',
-						'link_after'      => '',
+						'before'          => '',
+						'after'           => '',
+						'link_before'     => '<div id="shape" class="wrap-canvas"></div><span class="nav-menu-text">',
+						'link_after'      => '</span>',
 						'items_wrap' 	  => '<ul><li id="item-id">Menu: </li>%3$s</ul>'
 				);
 				wp_nav_menu($menu_arg);

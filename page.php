@@ -14,11 +14,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		<?php if ( is_front_page()) : ?>
-			<!-- with sitev1.js has random shapes <div id="shape">
-			</div> -->
-			
-		<?php else: ?>
+
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
@@ -33,7 +29,6 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; // end of the loop. ?>
-		<?php endif; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

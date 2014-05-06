@@ -14,76 +14,62 @@ jQuery(document).ready(function($) {
     /*
 		Home page shape
 	*/
-    //lets create an array of the paths
-    var path_a_pos = new Array();
-    var path_b_pos = new Array();
+
+    // draw shapes
+    var duration = 200;
+    var easing = "backOut";
     // path a path
-    path_a_pos.push({
-        path: 'M 53.877,3.254 19.298,10.058 4.997,24.329 45.224,23.732 z'
-    });
+
 
     // add shape to each menu 
-    $(".nav-menu > li").each(function(index, ele) {
+    $(".nav-menu > li").each(function(index) {
         drawshape($(".wrap-canvas")[index], index);
     });
 
+    function isOdd(num) {
+        return num % 2 == 1;
+    }
+
     function drawshape(target, index) {
         var shape = new Raphael(target, '120', '60');
+        var draw = shape.path("M 60, 30");
+        var bbb;
+        if (isOdd(index)) {
+            bbb = '#000';
+        } else {
+            bbb = '#F6ED0C';
+        }
+        draw.attr({
+            'stroke-width': '0',
+            'stroke-opacity': '1',
+            fill: bbb
+        }).data('id', 'draw' + index);
+        draw.animate({
+            path: get_random_path(),
+        }, duration, easing);
+
+        // hover
+        $(target).hover(function(ele) {
+            draw.animate({
+                path: get_random_path(),
+                fill: get_random_color()
+            }, duration, easing);
+        }, function() {
+            draw.animate({
+                fill: bbb
+            }, duration, easing);
+        });
+    }
+
+    function get_random_path() {
         var path = new Array();
         var m = get_random(0, 10) + " " + get_random(10, 10);
         var ctr = get_random(90, 120) + " " + get_random(0, 25);
         var cbr = get_random(90, 120) + " " + get_random(30, 60);
         var cbl = get_random(0, 30) + " " + get_random(30, 60);
         path.push(m, ctr, cbr, cbl);
-        var draw = shape.path("M" + path + "z");
-        draw.attr({
-            'stroke-width': '1',
-            'stroke-opacity': '1',
-            fill: get_random_color()
-        }).data('id', 'draw' + index);
+        return "M " + path + " z";
     }
-
-    $('.page_item').hover(function(ele) {
-        clearInterval(myVar);
-        nextShape($(ele).children);
-        myVar = setInterval(nextShape, interval);
-    });
-
-    path_a.animate(path_a_pos[randoma], duration, easing);
-    path_b.animate(path_b_pos[randomb], duration, easing);
-
-    function nextShape(target, index) {
-        var m = get_random(0, 10) + " " + get_random(10, 10);
-        var ctr = get_random(90, 120) + " " + get_random(0, 25);
-        var cbr = get_random(90, 120) + " " + get_random(30, 60);
-        var cbl = get_random(0, 30) + " " + get_random(30, 60);
-    }
-
-
-    // draw shapes
-    var duration = 400;
-    var easing = "backIn";
-    // starting point 
-    //var path_a = shape.path("M 250 250");
-    //var path_b = shape.path("M 250 250");
-    // set both path attr
-    path_a.attr({
-        'stroke-width': '0',
-        'stroke-opacity': '1',
-        fill: get_random_color()
-    }).data('id', 'path_a');
-    path_b.attr({
-        'stroke-width': '0',
-        'stroke-opacity': '1',
-        fill: '#FFFFFF'
-    }).data('id', 'path_a');
-    // draw random shape 
-
-    // draw first shape 
-    // slideshow shapes
-    var interval = 2500;
-    var myVar = setInterval(nextShape, interval);
-    // hover nav next shape 
 
 });
 /*
