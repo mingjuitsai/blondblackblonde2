@@ -91,9 +91,14 @@ function blondblackblonde_scripts() {
 	wp_enqueue_script( 'blondblackblonde-raphaeljs', get_template_directory_uri() . '/js/raphael-min.js', array(), '20140223', true );
 	// audio js html5shiv
 	wp_enqueue_script( 'blondblackblonde-audiojs', get_template_directory_uri() . '/js/audiojs/audiojs/audio.min.js', array(), '20140224', true );
-	// including site js 
-	wp_enqueue_script( 'blondblackblonde-sitejs', get_template_directory_uri() . '/js/site.js', array(), '20140225', true );
-
+	// if home including home js 
+	if (is_front_page()){
+		wp_enqueue_script( 'blondblackblonde-homejs', get_template_directory_uri() . '/js/home.js', array(), '20140225', true );
+	}
+	else{
+		// else including site js 
+		wp_enqueue_script( 'blondblackblonde-sitejs', get_template_directory_uri() . '/js/site.js', array(), '20140226', true );
+	}
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

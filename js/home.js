@@ -12,13 +12,13 @@ function get_random_color() {
 }
 jQuery(document).ready(function($) {
     /*
-        Home page shape
-    */
+		Home page shape
+	*/
     // draw shapes
     var duration = 220;
     var easing = "backOut";
-    var canvas_w = "120";
-    var canvas_h = "60";
+    var canvas_w = "160";
+    var canvas_h = "90";
     var ctr_x_min = canvas_w*0.75;
     var ctr_x_max = canvas_w;
     var ctr_y_min = 0;
@@ -88,7 +88,7 @@ jQuery(document).ready(function($) {
 
 });
 /*
-    Music
+	Music
 */
 $(function() {
     var playerclass = "playlist";

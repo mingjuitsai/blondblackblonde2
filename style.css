@@ -595,11 +595,13 @@ width: 50%;
 	font-weight: bold;
 	color: rgb(53, 53, 53);
 	line-height: 7rem;
+	opacity: 0;
 }
+.wf-active .site-title a{-webkit-transition: opacity 400ms 100ms ease;-ms-transition: opacity 400ms 100ms ease;transition: opacity 400ms 100ms ease;opacity: 1;}
 .site-title a:visited{
 }
 /* home page */
-.home .site-title a{font-size:10rem;line-height:11rem;opacity: 0;}
+.home .site-title a{font-size:10rem;line-height:11rem;}
 .wf-active .home .site-title a{-webkit-transition: opacity 1400ms 500ms ease;-ms-transition: opacity 1400ms 500ms ease;transition: opacity 1400ms 500ms ease;opacity: 1;}
 /* nav */
 .menu {
