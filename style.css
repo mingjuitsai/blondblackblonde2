@@ -276,10 +276,10 @@ a:active {
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	width: 100%;
 	display: block;
 	margin: auto;
 	text-align: center;
+	width: 100%;
 }
 .main-navigation ul {
 	list-style: none;
@@ -304,7 +304,7 @@ a:active {
 	transition: color 300ms ease;
 	font-family: "proxima-nova","Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 }
-.main-navigation a:hover{color:#440707;
+.main-navigation a:hover{color:#000000;
 	
 }
 .main-navigation ul ul {
@@ -339,7 +339,7 @@ a:active {
 }
 body:not(.home) .main-navigation .current_page_item .nav-menu-text{
 opacity: 1;
-color: rgb(102, 96, 65);
+color: rgb(63, 63, 63);
 }
 /* Small menu */
 .menu-toggle {
@@ -749,6 +749,15 @@ and (max-width : 480px) {
 	.home .site{
 		margin-top: 0;
 	}
+	/* BBB mobile home */
+	.home .site-main:before{
+		content:"";
+		display: block;
+		background: url(img/bbb.jpg) center center no-repeat;
+		margin: auto;
+		height: 200px;
+		width: 100%;
+	}
 	body:not(.home) .site-header{
 		padding: 2rem 0;
 		
@@ -772,6 +781,7 @@ and (max-width : 480px) {
 		float:none;
 		width: 100%;
 	}
+
 }
 @media only screen 
 and (max-width : 400px) {
