@@ -14,22 +14,19 @@ jQuery(document).ready(function($) {
     /*
 		Home page shape
 	*/
-
     // draw shapes
-    var duration = 200;
+    var duration = 220;
     var easing = "backOut";
     // path a path
-
 
     // add shape to each menu 
     $(".nav-menu > li").each(function(index) {
         drawshape($(".wrap-canvas")[index], index);
     });
-
+    // function if it is Odd. alternating colors 
     function isOdd(num) {
         return num % 2 == 1;
     }
-
     function drawshape(target, index) {
         var shape = new Raphael(target, '120', '60');
         var draw = shape.path("M 60, 30");
@@ -55,7 +52,7 @@ jQuery(document).ready(function($) {
         $(target).hover(function(ele) {
             draw.animate({
                 path: get_random_path(),
-                fill: get_random_color()
+                //fill: get_random_color()
             }, duration, easing);
         }, function() {
             draw.animate({
