@@ -27,11 +27,11 @@
 			?>
 		 
 				<section class="entry-subheader clear">
-					<img class="entry-img" src="<?php echo $image; ?>" alt="">
-					<h1 class="entry-title">
+					<img class="entry-img extend-section" src="<?php echo $image; ?>" alt="">
+					<h1 class="entry-title extend-section">
 						<?php echo $title; ?>
 					</h1>
-					<h2 class="entry-subtitle">
+					<h2 class="entry-subtitle extend-section">
 						<?php echo $sub_title; ?>
 					</h2>
 				</section>

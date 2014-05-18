@@ -276,11 +276,10 @@ a:active {
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	clear: both;
-	display: block;
 	width: 100%;
-	float: left;
-	margin-top: 2rem;
+	display: block;
+	margin: auto;
+	text-align: center;
 }
 .main-navigation ul {
 	list-style: none;
@@ -346,13 +345,16 @@ a:active {
 @media screen and (max-width: 600px) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
-		display: block;
+		/*display: inline-block;*/
+		/*margin-bottom: .6rem;*/
 	}
 
 	.main-navigation ul {
-		display: none;
+		/*display: none;*/
 	}
+
 }
+
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {
@@ -579,10 +581,10 @@ object {
 */
 .site{
 margin: auto;
-width: 50%;
+width: 60%;
 }
 /* home page */
-.home .site{margin-top:7%;}
+.home .site{width:100%;margin-top:7%;}
 /*
 	Header
 */
@@ -647,7 +649,7 @@ width: 50%;
 }
 /* entry subheader */
 .entry-img{width:37%;float:left;margin-right:1.7%;overflow:hidden;}
-.entry-subheader .entry-title, .entry-subheader .entry-subtitle {
+.entry-title, .entry-subtitle {
 width: 58%;
 display: inline-block;
 margin-top: .8rem;
@@ -678,9 +680,79 @@ ol.playlist {margin:1.6rem 0 2rem 0;
 .audiojs .play-pause{
 	width:auto;
 }
-
 /*
 	entry-meta
 */
 footer.entry-meta{text-align:right;}
 footer.entry-meta a{color:rgb(75, 75, 75);font-size:1.5rem;line-height:1.5rem;}
+/*
+	Responsive breakpoints ( breakpoints according to contents )
+*/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (max-width : 1260px) {
+body:not(.home) .site{width:70%;
+
+}
+}
+@media only screen 
+and (max-width : 1030px) {
+body:not(.home) .site{
+	width:80%;
+}
+}
+@media only screen 
+and (max-width : 900px) {
+body:not(.home) .site{
+	width:90%;
+}
+.wf-active .home .site-title a{
+	font-size: 7.3rem;
+}
+}
+@media only screen 
+and (max-width : 800px) {
+.wrap-canvas{
+	display:none;
+}
+.nav-menu-text{
+	opacity: 1;
+}
+}
+@media only screen 
+and (max-width : 630px) {
+.site .site-title a{
+	font-size: 5.5rem;
+}
+.wf-active .home .site-title a{
+	font-size: 5.5rem;
+}
+.home .site{width: 90%;}
+.home .nav-menu-text{
+	font-size: 2.3rem;}
+}
+@media only screen 
+and (max-width : 480px) {
+	.site .site-title a{
+		font-size: 4rem;
+	}
+	.wf-active .home .site-title a{
+		font-size: 4.5rem;
+	}
+	/*
+		music 
+	*/
+	.extend-section{
+		float:none;
+		width: 100%;
+	}
+}
+@media only screen 
+and (max-width : 400px) {
+	.site .site-title a{
+		font-size: 3rem;
+	}
+	.wf-active .home .site-title a{
+		font-size: 3.2rem;
+	}
+}
