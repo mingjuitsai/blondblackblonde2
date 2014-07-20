@@ -593,6 +593,7 @@ width: 60%;
 	Header
 */
 .site-header{padding:9rem 0 3rem 0;}
+body:not(.home) .site-header{padding:4rem 0;}
 .site-branding{
 	margin-bottom: 1.3rem;
 }
